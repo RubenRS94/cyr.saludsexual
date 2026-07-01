@@ -1,0 +1,759 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salud Sexual y Reproductiva en Ontinyent | CIR Espacio Médico</title>
+<meta name="description" content="Consulta de salud sexual y reproductiva en Ontinyent. Anticoncepción, DIU, implante, revisiones ginecológicas, citología, VPH, ITS, fertilidad, menopausia y disfunciones sexuales en Valencia y alrededores.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "CIR Espacio Médico",
+  "image": "URL_IMAGEN_1",
+  "telephone": "+34623456789",
+  "email": "EMAIL_CLINICA",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "DIRECCION_CLINICA",
+    "addressLocality": "Ontinyent",
+    "postalCode": "46870",
+    "addressRegion": "Valencia",
+    "addressCountry": "ES"
+  },
+  "medicalSpecialty": ["Gynecologic", "Obstetric", "SexualHealth"],
+  "areaServed": ["Ontinyent", "Valencia", "Albaida", "Xàtiva", "Bocairent"],
+  "url": "URL_SERVICIO_SALUD_SEXUAL_REPRODUCTIVA",
+  "sameAs": ["URL_INSTAGRAM"]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --color-burgundy:#5A2030;
+  --color-burgundy-dark:#401622;
+  --color-cream:#FBFAF8;
+  --color-cream-soft:#F4F1EC;
+  --color-blush:#F5F0EC;
+  --color-ink:#3A2A28;
+  --color-ink-soft:#6E5C58;
+  --color-white:#FFFFFF;
+  --color-line:rgba(58,42,40,0.14);
+  --font-display:'Cormorant Garamond',serif;
+  --font-body:'Jost',sans-serif;
+  --space-xs:.5rem;
+  --space-sm:1rem;
+  --space-md:2rem;
+  --space-lg:4rem;
+  --space-xl:7rem;
+  --radius-sm:6px;
+  --radius-md:14px;
+  --radius-pill:999px;
+  --ease:cubic-bezier(.4,0,.2,1);
+  --t-fast:.25s var(--ease);
+  --t-slow:.6s var(--ease);
+  --container:1200px;
+  --header-h:84px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font-body);color:var(--color-ink);background:var(--color-cream);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+ul{list-style:none;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;}
+h1,h2,h3,h4{font-family:var(--font-display);font-weight:500;line-height:1.15;color:var(--color-burgundy-dark);}
+:focus-visible{outline:2px solid var(--color-burgundy);outline-offset:3px;}
+.container{max-width:var(--container);margin:0 auto;padding:0 var(--space-md);}
+.section{padding:var(--space-xl) 0;}
+.eyebrow{font-family:var(--font-body);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--color-burgundy);display:inline-flex;align-items:center;gap:.6rem;margin-bottom:var(--space-sm);}
+.eyebrow::after{content:"";width:34px;height:1px;background:var(--color-burgundy);}
+.section-head{text-align:center;max-width:680px;margin:0 auto var(--space-lg);}
+.section-head .eyebrow{justify-content:center;}
+.section-head .eyebrow::after{display:none;}
+.section-head h2{font-size:clamp(1.9rem,3.4vw,2.75rem);}
+.section-head p{margin-top:var(--space-sm);color:var(--color-ink-soft);}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.95rem 2.1rem;border-radius:var(--radius-pill);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;transition:transform var(--t-fast),box-shadow var(--t-fast),background var(--t-fast),color var(--t-fast),border-color var(--t-fast);white-space:nowrap;}
+.btn-primary{background:var(--color-burgundy);color:var(--color-white);}
+.btn-primary:hover{background:var(--color-burgundy-dark);transform:translateY(-2px);box-shadow:0 10px 24px rgba(90,32,48,.28);}
+.btn-outline{background:transparent;color:var(--color-burgundy);border:1px solid var(--color-burgundy);}
+.btn-outline:hover{background:var(--color-burgundy);color:var(--color-white);transform:translateY(-2px);}
+[data-reveal]{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease);}
+[data-reveal].is-visible{opacity:1;transform:translateY(0);}
+.skip-link{position:absolute;left:-999px;top:auto;background:var(--color-burgundy);color:#fff;padding:1rem;z-index:2000;border-radius:0 0 8px 0;}
+.skip-link:focus{left:0;top:0;}
+
+.site-header{position:sticky;top:0;z-index:1000;background:rgba(248,242,236,.92);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:box-shadow var(--t-fast),border-color var(--t-fast),background var(--t-fast);}
+.site-header.is-scrolled{border-color:var(--color-line);box-shadow:0 8px 30px rgba(64,22,34,.06);}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:var(--header-h);transition:height var(--t-fast);}
+.site-header.is-scrolled .header-inner{height:68px;}
+.logo{font-family:var(--font-display);line-height:1;}
+.logo a{display:block;}
+.logo-mark{font-size:1.9rem;letter-spacing:.06em;color:var(--color-burgundy-dark);}
+.logo-sub{display:block;font-family:var(--font-body);font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;color:var(--color-ink-soft);margin-top:2px;}
+.main-nav{display:flex;align-items:center;}
+.main-nav ul{display:flex;gap:var(--space-md);align-items:center;}
+.main-nav a{position:relative;font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;color:var(--color-ink);padding:.4rem 0;}
+.main-nav a::after{content:"";position:absolute;left:0;bottom:-2px;width:0;height:1px;background:var(--color-burgundy);transition:width var(--t-fast);}
+.main-nav a:hover::after,.main-nav a[aria-current="page"]::after{width:100%;}
+.main-nav a[aria-current="page"]{color:var(--color-burgundy);}
+.nav-item-has-submenu{position:relative;}
+.submenu{position:absolute;top:calc(100% + 18px);left:50%;transform:translateX(-50%) translateY(10px);min-width:250px;background:var(--color-white);border:1px solid var(--color-line);border-radius:var(--radius-md);box-shadow:0 20px 45px rgba(64,22,34,.12);padding:.75rem;display:grid!important;gap:.15rem!important;opacity:0;visibility:hidden;transition:opacity var(--t-fast),transform var(--t-fast),visibility var(--t-fast);}
+.nav-item-has-submenu:hover .submenu,.nav-item-has-submenu:focus-within .submenu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);}
+.submenu a{display:block;padding:.65rem .8rem;border-radius:10px;font-size:.76rem;letter-spacing:.05em;}
+.submenu a:hover{background:var(--color-blush);color:var(--color-burgundy);}
+.submenu a::after{display:none;}
+.header-actions{display:flex;align-items:center;gap:var(--space-sm);}
+.header-cta{display:none;}
+.nav-toggle{display:flex;flex-direction:column;gap:5px;width:28px;padding:6px 0;}
+.nav-toggle span{width:100%;height:2px;background:var(--color-burgundy-dark);transition:transform var(--t-fast),opacity var(--t-fast);}
+
+.hero{padding:var(--space-lg) 0 0;}
+.hero-media{position:relative;border-radius:var(--radius-md);overflow:hidden;aspect-ratio:16/9;min-height:460px;border:1px solid var(--color-line);background:var(--color-blush);}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:76% center;}
+.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--color-cream) 0%,var(--color-cream) 38%,rgba(251,250,248,.93) 48%,rgba(251,250,248,.56) 58%,rgba(251,250,248,0) 72%);}
+.hero-content{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:var(--space-md) var(--space-lg);max-width:650px;}
+.hero-content h1{font-size:clamp(2.35rem,5.2vw,4.15rem);margin-bottom:var(--space-sm);color:var(--color-burgundy-dark);}
+.hero-content h1 em{font-style:italic;color:var(--color-burgundy);}
+.hero-rule{width:60px;height:1px;background:var(--color-burgundy);margin:var(--space-sm) 0;}
+.hero-content p{font-size:1.05rem;color:var(--color-ink-soft);max-width:42ch;margin-bottom:var(--space-md);}
+.hero-ctas{display:flex;gap:var(--space-sm);flex-wrap:wrap;}
+.hero-pills{display:flex;flex-wrap:wrap;gap:.55rem;margin-bottom:var(--space-sm);}
+.hero-pill{display:inline-flex;padding:.42rem .78rem;border-radius:var(--radius-pill);background:rgba(255,255,255,.7);border:1px solid var(--color-line);font-size:.75rem;color:var(--color-burgundy-dark);}
+
+.intro-grid{display:grid;grid-template-columns:1fr;gap:var(--space-lg);align-items:start;}
+.intro-copy h2{font-size:clamp(1.9rem,3.4vw,2.65rem);margin-bottom:var(--space-sm);}
+.intro-copy p{color:var(--color-ink-soft);max-width:48ch;margin-bottom:var(--space-sm);}
+.local-note{margin-top:var(--space-md);padding:1.2rem;border-radius:var(--radius-md);background:var(--color-blush);border:1px solid var(--color-line);font-size:.95rem;color:var(--color-ink-soft);}
+.treatments-grid{display:grid;grid-template-columns:1fr;gap:var(--space-sm);}
+.treatment-card{position:relative;background:var(--color-white);border:1px solid var(--color-line);border-radius:var(--radius-md);padding:1.35rem;overflow:hidden;transition:transform var(--t-fast),box-shadow var(--t-fast),border-color var(--t-fast);}
+.treatment-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--color-burgundy),rgba(90,32,48,.18));opacity:.9;}
+.treatment-card:hover{transform:translateY(-5px);box-shadow:0 18px 34px rgba(64,22,34,.09);border-color:transparent;}
+.treatment-icon{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:1px solid rgba(90,32,48,.25);background:var(--color-blush);color:var(--color-burgundy);margin-bottom:.85rem;}
+.treatment-icon svg{width:21px;height:21px;}
+.treatment-card h3{font-size:1.22rem;margin-bottom:.45rem;}
+.treatment-card p{font-size:.9rem;color:var(--color-ink-soft);}
+
+.concerns{background:var(--color-blush);}
+.concerns-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:.75rem;}
+.concern-item{background:rgba(255,255,255,.82);border:1px solid var(--color-line);border-radius:var(--radius-pill);padding:.8rem 1rem;display:flex;align-items:center;gap:.55rem;font-size:.9rem;color:var(--color-ink);min-height:46px;}
+.concern-item::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--color-burgundy);flex:none;}
+
+.approach-wrap{display:grid;grid-template-columns:1fr;gap:var(--space-lg);align-items:center;}
+.approach-media{border-radius:var(--radius-md);overflow:hidden;aspect-ratio:5/4;border:1px solid var(--color-line);}
+.approach-media img{width:100%;height:100%;object-fit:cover;}
+.approach-content h2{font-size:clamp(1.9rem,3.4vw,2.65rem);margin-bottom:var(--space-sm);}
+.approach-content>p{color:var(--color-ink-soft);max-width:52ch;}
+.approach-list{display:grid;gap:var(--space-sm);margin-top:var(--space-md);}
+.approach-item{display:flex;gap:var(--space-sm);padding:var(--space-sm);border-radius:var(--radius-md);background:var(--color-blush);border:1px solid transparent;transition:border-color var(--t-fast),transform var(--t-fast);}
+.approach-item:hover{border-color:var(--color-line);transform:translateY(-2px);}
+.approach-number{flex:none;width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--color-burgundy);color:var(--color-white);font-family:var(--font-display);font-size:1.1rem;}
+.approach-item h3{font-size:1.12rem;margin-bottom:.25rem;}
+.approach-item p{font-size:.88rem;color:var(--color-ink-soft);}
+
+.results-note{background:var(--color-burgundy-dark);color:var(--color-cream);border-radius:var(--radius-md);padding:var(--space-lg) var(--space-md);display:grid;grid-template-columns:1fr;gap:var(--space-md);align-items:center;}
+.results-note .eyebrow{color:var(--color-cream);}
+.results-note .eyebrow::after{background:rgba(248,242,236,.58);}
+.results-note h2{color:var(--color-cream);font-size:clamp(1.8rem,3vw,2.35rem);}
+.results-note p{color:rgba(248,242,236,.84);}
+.results-gallery{display:grid;grid-template-columns:1fr 1fr;gap:var(--space-sm);}
+.results-gallery figure{border-radius:var(--radius-md);overflow:hidden;background:rgba(255,255,255,.10);border:1px solid rgba(248,242,236,.16);}
+.results-gallery img{width:100%;height:100%;aspect-ratio:4/3;object-fit:cover;opacity:.95;background:rgba(255,255,255,.06);}
+.results-gallery figcaption{font-size:.78rem;padding:.65rem .8rem;color:rgba(248,242,236,.9);}
+
+
+/* ============================================================
+   RESEÑAS (slider manual de cards verificadas por Google)
+   ============================================================ */
+.testimonials{background:var(--color-blush);}
+.testi-wrap{position:relative;}
+.testi-track{overflow:hidden;}
+.testi-slides{display:flex;gap:var(--space-md);transition:transform .5s var(--ease);}
+.testi-card{flex:0 0 100%;background:var(--color-white);border:1px solid var(--color-line);border-radius:var(--radius-md);padding:var(--space-md);display:flex;flex-direction:column;gap:.7rem;}
+@media(min-width:700px){.testi-card{flex:0 0 calc((100% - var(--space-md)*2)/3);}}
+.testi-top{display:flex;align-items:center;justify-content:space-between;gap:.5rem;}
+.testi-stars{color:var(--color-burgundy);font-size:.95rem;letter-spacing:1px;}
+.google-badge{display:inline-flex;align-items:center;gap:.35rem;font-size:.72rem;color:var(--color-ink-soft);white-space:nowrap;}
+.google-badge svg{width:15px;height:15px;flex:none;}
+.testi-card p{font-size:.92rem;color:var(--color-ink);flex:1;}
+.testi-author{display:flex;align-items:center;gap:.6rem;margin-top:.3rem;}
+.testi-avatar{width:36px;height:36px;border-radius:50%;background:var(--color-blush);color:var(--color-burgundy);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:1rem;flex:none;}
+.testi-author-name{font-size:.85rem;font-weight:500;line-height:1.2;}
+.testi-author-meta{font-size:.74rem;color:var(--color-ink-soft);}
+.testi-nav{display:flex;align-items:center;justify-content:center;gap:var(--space-md);margin-top:var(--space-md);}
+.testi-arrow{width:44px;height:44px;border-radius:50%;border:1px solid var(--color-burgundy);color:var(--color-burgundy);display:flex;align-items:center;justify-content:center;transition:background var(--t-fast),color var(--t-fast),transform var(--t-fast);}
+.testi-arrow:hover{background:var(--color-burgundy);color:var(--color-white);}
+.testi-arrow svg{width:18px;height:18px;}
+.testi-controls{display:none;}
+.testi-dot{width:8px;height:8px;border-radius:50%;background:var(--color-line);transition:background var(--t-fast),transform var(--t-fast);}
+.testi-dot.is-active{background:var(--color-burgundy);transform:scale(1.2);}
+
+.faq{background:var(--color-blush);}
+.faq-list{max-width:780px;margin:0 auto;}
+.faq-item{border-bottom:1px solid var(--color-line);}
+.faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:var(--space-sm);padding:1.3rem 0;text-align:left;font-family:var(--font-display);font-size:1.15rem;color:var(--color-burgundy-dark);}
+.faq-q .plus{flex:none;width:26px;height:26px;border:1px solid var(--color-burgundy);border-radius:50%;position:relative;transition:transform var(--t-fast);}
+.faq-q .plus::before,.faq-q .plus::after{content:"";position:absolute;background:var(--color-burgundy);top:50%;left:50%;transform:translate(-50%,-50%);}
+.faq-q .plus::before{width:10px;height:1px;}
+.faq-q .plus::after{width:1px;height:10px;transition:opacity var(--t-fast);}
+.faq-item.is-open .plus{transform:rotate(180deg);}
+.faq-item.is-open .plus::after{opacity:0;}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .45s var(--ease),padding var(--t-fast);}
+.faq-a p{padding-bottom:1.3rem;color:var(--color-ink-soft);font-size:.92rem;max-width:62ch;}
+.faq-item.is-open .faq-a{max-height:260px;}
+
+.cta-final{background:var(--color-burgundy);color:var(--color-cream);border-radius:var(--radius-md);padding:var(--space-xl) var(--space-md);margin:0 var(--space-md);display:grid;grid-template-columns:1fr;gap:var(--space-lg);}
+.cta-final-text h2{color:var(--color-cream);font-size:clamp(2rem,4vw,2.6rem);margin-bottom:var(--space-sm);}
+.cta-final-text p{color:rgba(248,242,236,.8);max-width:42ch;margin-bottom:var(--space-md);}
+.cta-phone{display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;color:var(--color-cream);}
+.cta-phone svg{width:18px;height:18px;}
+.cta-form{background:var(--color-cream);border-radius:var(--radius-md);padding:var(--space-md);display:grid;grid-template-columns:1fr 1fr;gap:var(--space-sm);}
+.form-field{display:flex;flex-direction:column;gap:.35rem;}
+.form-field.full{grid-column:1/-1;}
+.form-field label{font-size:.74rem;letter-spacing:.05em;text-transform:uppercase;color:var(--color-ink-soft);}
+.form-field input,.form-field select{font-family:var(--font-body);font-size:.92rem;color:var(--color-ink);background:var(--color-white);border:1px solid var(--color-line);border-radius:var(--radius-sm);padding:.8rem .9rem;transition:border-color var(--t-fast),box-shadow var(--t-fast);}
+.form-field input:focus,.form-field select:focus{border-color:var(--color-burgundy);box-shadow:0 0 0 3px rgba(90,32,48,.12);}
+.form-submit{grid-column:1/-1;justify-self:start;margin-top:.4rem;}
+.form-note{grid-column:1/-1;font-size:.72rem;color:var(--color-ink-soft);}
+.form-note a{text-decoration:underline;}
+
+.site-footer{background:var(--color-burgundy-dark);color:rgba(248,242,236,.78);margin-top:var(--space-xl);}
+.footer-top{padding:var(--space-lg) 0;border-bottom:1px solid rgba(248,242,236,.12);}
+.footer-grid{display:grid;grid-template-columns:1fr;gap:var(--space-lg);}
+.footer-brand .logo-mark{color:var(--color-cream);}
+.footer-brand .logo-sub{color:rgba(248,242,236,.6);}
+.footer-brand p{margin-top:var(--space-sm);font-size:.88rem;max-width:32ch;}
+.footer-col h4{font-family:var(--font-body);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--color-cream);margin-bottom:var(--space-sm);}
+.footer-col li{margin-bottom:.6rem;font-size:.88rem;}
+.footer-col a:hover{color:var(--color-cream);}
+.footer-social{display:flex;gap:.8rem;margin-top:var(--space-sm);}
+.footer-social a{width:36px;height:36px;border-radius:50%;border:1px solid rgba(248,242,236,.3);display:flex;align-items:center;justify-content:center;transition:background var(--t-fast),border-color var(--t-fast);}
+.footer-social a:hover{background:rgba(248,242,236,.12);border-color:rgba(248,242,236,.6);}
+.footer-social svg{width:16px;height:16px;}
+.footer-bottom{padding:var(--space-sm) 0 var(--space-lg);display:flex;flex-wrap:wrap;gap:var(--space-sm);align-items:center;justify-content:space-between;font-size:.78rem;}
+.footer-legal{display:flex;gap:var(--space-sm);flex-wrap:wrap;}
+.footer-legal a:hover{color:var(--color-cream);}
+
+@media(min-width:680px){.treatments-grid{grid-template-columns:repeat(2,1fr);}.concerns-grid{grid-template-columns:repeat(3,1fr);}}
+@media(min-width:900px){.intro-grid{grid-template-columns:.82fr 1.18fr;}.approach-wrap{grid-template-columns:1fr 1fr;}.cta-final{grid-template-columns:.9fr 1.1fr;align-items:center;padding:var(--space-xl);}.footer-grid{grid-template-columns:1.2fr 1fr 1fr 1fr;}}
+@media(min-width:1024px){.header-cta{display:inline-flex;}.nav-toggle{display:none;}.treatments-grid{grid-template-columns:repeat(2,1fr);}.concerns-grid{grid-template-columns:repeat(4,1fr);}.results-note{grid-template-columns:.8fr 1.2fr;padding:var(--space-lg);}}
+@media(max-width:1023px){
+  .main-nav{position:fixed;inset:var(--header-h) 0 0 0;background:var(--color-cream);flex-direction:column;align-items:flex-start;transform:translateX(100%);transition:transform var(--t-slow);padding:var(--space-lg) var(--space-md);overflow-y:auto;}
+  .main-nav.is-open{transform:translateX(0);}
+  .main-nav ul{flex-direction:column;align-items:flex-start;gap:var(--space-md);width:100%;}
+  .main-nav a{font-size:1.3rem;font-family:var(--font-display);}
+  .nav-item-has-submenu{width:100%;}
+  .submenu{position:static;transform:none!important;min-width:0;width:100%;opacity:1;visibility:visible;box-shadow:none;background:transparent;border:0;padding:.4rem 0 0 .85rem;display:grid!important;gap:.5rem!important;}
+  .submenu a{font-size:1rem;font-family:var(--font-body);padding:.3rem 0;}
+  body.nav-locked{overflow:hidden;}
+  .nav-toggle.is-open span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .nav-toggle.is-open span:nth-child(2){opacity:0;}
+  .nav-toggle.is-open span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+}
+@media(max-width:768px){
+  .section{padding:var(--space-lg) 0;}
+  .hero-media{aspect-ratio:3/4;min-height:560px;}
+  .hero-media::after{background:linear-gradient(180deg,var(--color-cream) 0%,var(--color-cream) 30%,rgba(251,250,248,.9) 45%,rgba(251,250,248,.1) 68%,rgba(251,250,248,0) 100%);}
+  .hero-content{justify-content:flex-start;padding:var(--space-md);max-width:none;}
+  .hero-content p{font-size:.98rem;}
+  .hero-ctas .btn{width:100%;}
+  .treatment-card{padding:1rem;display:grid;grid-template-columns:auto 1fr;column-gap:.8rem;align-items:start;}
+  .treatment-icon{width:36px;height:36px;margin-bottom:0;grid-row:1 / span 2;}
+  .treatment-card h3{font-size:1.08rem;margin-bottom:.25rem;}
+  .treatment-card p{font-size:.84rem;line-height:1.45;}
+  .concerns-grid{gap:.55rem;}
+  .concern-item{padding:.62rem .72rem;font-size:.82rem;min-height:40px;}
+  .results-gallery{grid-template-columns:1fr;}
+}
+@media(max-width:600px){.container{padding:0 var(--space-sm);}.cta-final{margin:0 var(--space-sm);padding:var(--space-lg) var(--space-sm);}.cta-form{grid-template-columns:1fr;padding:var(--space-sm);}.logo-mark{font-size:1.65rem;}.logo-sub{font-size:.49rem;}.header-inner{height:76px;}.main-nav{inset:76px 0 0 0;}.site-header.is-scrolled .header-inner{height:64px;}}
+@media (prefers-reduced-motion:reduce){[data-reveal]{opacity:1;transform:none;transition:none;}html{scroll-behavior:auto;}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Saltar al contenido principal</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <div class="logo">
+      <a href="URL_INICIO" aria-label="CIR Espacio Médico, inicio">
+        <span class="logo-mark">CIR</span>
+        <span class="logo-sub">Carbonell &amp; Ribera · Espacio Médico</span>
+      </a>
+    </div>
+
+    <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
+      <ul>
+        <li><a href="URL_INICIO">Inicio</a></li>
+        <li><a href="URL_SOBRE_NOSOTRAS">Sobre nosotras</a></li>
+        <li class="nav-item-has-submenu">
+          <a href="URL_INICIO#servicios">Servicios</a>
+          <ul class="submenu" aria-label="Servicios">
+            <li><a href="URL_SERVICIO_MEDICINA_ESTETICA">Medicina estética</a></li>
+            <li><a href="URL_SERVICIO_CIRUGIA_MENOR">Cirugía menor ambulatoria</a></li>
+            <li><a href="URL_SERVICIO_DERMATOLOGIA_TRICOLOGIA">Dermatología y tricología</a></li>
+            <li><a href="URL_SERVICIO_SALUD_SEXUAL_REPRODUCTIVA" aria-current="page">Salud sexual y reproductiva</a></li>
+            <li><a href="URL_SERVICIO_VASECTOMIA">Vasectomía sin bisturí</a></li>
+            <li><a href="URL_SERVICIO_MEDICINA_INTEGRATIVA">Medicina integrativa</a></li>
+          </ul>
+        </li>
+        <li><a href="URL_CONTACTO">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="URL_CONTACTO" class="btn btn-primary header-cta">Pedir cita</a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menú de navegación">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="container">
+      <div class="hero-media" data-reveal>
+        <img src="URL_IMAGEN_1" alt="Consulta de salud sexual y reproductiva en CIR Espacio Médico en Ontinyent">
+        <div class="hero-content">
+          <span class="eyebrow">Salud sexual y reproductiva en Ontinyent</span>
+          <h1>Un espacio donde hablar con <em>confianza</em> y tranquilidad</h1>
+          <div class="hero-rule" aria-hidden="true"></div>
+          <p>Atención médica cercana y basada en evidencia para cuidar tu salud sexual, ginecológica y reproductiva en cada etapa de la vida. Atendemos en Ontinyent a pacientes de Valencia y alrededores.</p>
+          <div class="hero-pills" aria-label="Puntos clave">
+            <span class="hero-pill">Anticoncepción</span>
+            <span class="hero-pill">Revisiones ginecológicas</span>
+            <span class="hero-pill">ITS y fertilidad</span>
+          </div>
+          <div class="hero-ctas">
+            <a href="URL_CONTACTO" class="btn btn-primary">Reservar consulta</a>
+            <a href="#tratamientos" class="btn btn-outline">Ver tratamientos</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="tratamientos">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-copy" data-reveal>
+          <span class="eyebrow">Qué tratamientos realizamos</span>
+          <h2>Salud sexual, ginecológica y reproductiva con atención personalizada</h2>
+          <p>Cuidamos de tu salud sexual y reproductiva desde una consulta tranquila, sin juicios y con información clara para que puedas tomar decisiones con seguridad.</p>
+          <p>Valoramos cada caso de forma individual, adaptando el consejo médico a tu edad, estilo de vida, antecedentes, objetivos y momento vital.</p>
+          <div class="local-note">Consulta de salud sexual y reproductiva en Ontinyent para pacientes de la zona y otros puntos de Valencia como Albaida, Xàtiva, Bocairent y alrededores.</div>
+        </div>
+
+        <div class="treatments-grid">
+          <article class="treatment-card" data-reveal>
+            <div class="treatment-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="8"/><path d="M12 8v8M8 12h8"/></svg></div>
+            <h3>Anticoncepción</h3>
+            <p>Asesoramiento sobre DIU, implante, píldora, anillo, parche y otros métodos según tus necesidades.</p>
+          </article>
+          <article class="treatment-card" data-reveal>
+            <div class="treatment-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3c3 2.6 5 5.7 5 9a5 5 0 0 1-10 0c0-3.3 2-6.4 5-9Z"/><path d="M9 19h6"/></svg></div>
+            <h3>Revisiones ginecológicas</h3>
+            <p>Consulta ginecológica, citología, VPH, ecografía y seguimiento preventivo cuando corresponda.</p>
+          </article>
+          <article class="treatment-card" data-reveal>
+            <div class="treatment-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-4.4-9.3-9C1 8 2.8 4.5 6.4 4c2-.3 3.7.6 5.6 2.6C13.9 4.6 15.6 3.7 17.6 4c3.6.5 5.4 4 3.7 8-2.3 4.6-9.3 9-9.3 9Z"/></svg></div>
+            <h3>ITS y salud sexual</h3>
+            <p>Valoración, orientación y pruebas relacionadas con infecciones de transmisión sexual y bienestar sexual.</p>
+          </article>
+          <article class="treatment-card" data-reveal>
+            <div class="treatment-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="9" r="5"/><path d="M12 14v7M9 18h6"/></svg></div>
+            <h3>Fertilidad</h3>
+            <p>Primera valoración, orientación y acompañamiento si estás buscando embarazo o tienes dudas.</p>
+          </article>
+          <article class="treatment-card" data-reveal>
+            <div class="treatment-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h4l3 8 4-16 3 8h2"/><circle cx="12" cy="12" r="9"/></svg></div>
+            <h3>Menopausia</h3>
+            <p>Acompañamiento médico en síntomas, cambios hormonales, salud íntima y calidad de vida.</p>
+          </article>
+          <article class="treatment-card" data-reveal>
+            <div class="treatment-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 4 6v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V6l-8-4Z"/><path d="m9 12 2 2 4-5"/></svg></div>
+            <h3>Disfunciones sexuales</h3>
+            <p>Consulta para dolor, deseo, molestias, dificultades sexuales o cambios que afecten a tu bienestar.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="concerns section">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">En qué podemos ayudarte</span>
+        <h2>Consulta con confianza cualquier duda o cambio</h2>
+        <p>Un espacio pensado para hablar con tranquilidad de anticoncepción, revisiones, embarazo, infecciones de transmisión sexual y problemas de salud sexual.</p>
+      </div>
+      <div class="concerns-grid">
+        <div class="concern-item" data-reveal>Elegir anticoncepción</div>
+        <div class="concern-item" data-reveal>Revisión ginecológica</div>
+        <div class="concern-item" data-reveal>Búsqueda de embarazo</div>
+        <div class="concern-item" data-reveal>Citología y VPH</div>
+        <div class="concern-item" data-reveal>ITS</div>
+        <div class="concern-item" data-reveal>Menopausia</div>
+        <div class="concern-item" data-reveal>Dolor o molestias</div>
+        <div class="concern-item" data-reveal>Salud sexual</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="approach-wrap">
+        <div class="approach-media" data-reveal>
+          <img src="URL_IMAGEN_2" alt="Atención cercana en consulta de salud sexual y reproductiva en CIR Ontinyent">
+        </div>
+        <div class="approach-content" data-reveal>
+          <span class="eyebrow">Nuestro enfoque</span>
+          <h2>Atención cercana, médica y adaptada a cada etapa</h2>
+          <p>Tratamos cada consulta con respeto, confidencialidad y criterio médico. Nuestro objetivo es que entiendas tus opciones y te sientas acompañada en la decisión.</p>
+          <div class="approach-list">
+            <div class="approach-item"><span class="approach-number">1</span><div><h3>Escucha sin juicio</h3><p>Hablamos de tu situación con naturalidad, privacidad y tiempo suficiente.</p></div></div>
+            <div class="approach-item"><span class="approach-number">2</span><div><h3>Valoración médica</h3><p>Revisamos síntomas, antecedentes, hábitos, necesidades y objetivos.</p></div></div>
+            <div class="approach-item"><span class="approach-number">3</span><div><h3>Opciones claras</h3><p>Te explicamos alternativas, beneficios, límites y posibles efectos de cada opción.</p></div></div>
+            <div class="approach-item"><span class="approach-number">4</span><div><h3>Seguimiento personalizado</h3><p>Ajustamos el plan si cambian tus necesidades o aparece cualquier duda.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="results-note" data-reveal>
+        <div>
+          <span class="eyebrow">Casos reales</span>
+          <h2>Galería clínica, cuando proceda</h2>
+          <p>Por privacidad y por el tipo de consulta, no todos los casos se muestran públicamente. Esta sección queda preparada para añadir imágenes o recursos clínicos autorizados desde la galería de WordPress cuando sea adecuado.</p>
+        </div>
+        <div class="results-gallery" aria-label="Casos reales de salud sexual y reproductiva">
+          <figure>
+            <img src="URL_IMAGEN_3" alt="Recurso clínico antes de tratamiento de salud sexual y reproductiva">
+            <figcaption>Antes o valoración inicial</figcaption>
+          </figure>
+          <figure>
+            <img src="URL_IMAGEN_4" alt="Recurso clínico después de seguimiento de salud sexual y reproductiva">
+            <figcaption>Seguimiento o evolución</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials section">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Reseñas</span>
+        <h2>Lo que dicen nuestras pacientes</h2>
+      </div>
+      <div class="testi-wrap" data-reveal>
+        <div class="testi-track">
+          <div class="testi-slides" id="testiSlides"><!-- generado por JS --></div>
+        </div>
+        <div class="testi-nav">
+          <button class="testi-arrow" id="testiPrev" aria-label="Reseña anterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 6l-6 6 6 6"/></svg>
+          </button>
+          <div class="testi-controls" id="testiControls"></div>
+          <button class="testi-arrow" id="testiNext" aria-label="Siguiente reseña">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq section">
+    <div class="container">
+      <div class="section-head" data-reveal>
+        <span class="eyebrow">Preguntas frecuentes</span>
+        <h2>Dudas habituales sobre salud sexual y reproductiva</h2>
+      </div>
+      <div class="faq-list" data-reveal>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">¿Cuándo hacer una citología?<span class="plus" aria-hidden="true"></span></button>
+          <div class="faq-a"><p>Depende de la edad, antecedentes y controles previos. En consulta revisaremos tu caso y te indicaremos cuándo corresponde realizar citología o prueba de VPH.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">¿Cuál es el mejor anticonceptivo?<span class="plus" aria-hidden="true"></span></button>
+          <div class="faq-a"><p>No existe un único método ideal para todas las personas. Valoramos tu salud, preferencias, comodidad, historial médico y objetivos para recomendar la opción más adecuada.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">¿Cuándo consultar por infertilidad?<span class="plus" aria-hidden="true"></span></button>
+          <div class="faq-a"><p>Puede variar según la edad, el tiempo buscando embarazo y los antecedentes. Si tienes dudas, una valoración inicial ayuda a orientar los siguientes pasos.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">¿Puedo consultar por una ITS aunque no tenga síntomas?<span class="plus" aria-hidden="true"></span></button>
+          <div class="faq-a"><p>Sí. Algunas infecciones pueden no dar síntomas. Si has tenido una relación de riesgo o quieres revisar tu salud sexual, podemos orientarte sobre pruebas y prevención.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">¿La consulta es confidencial?<span class="plus" aria-hidden="true"></span></button>
+          <div class="faq-a"><p>Sí. La consulta se realiza en un entorno privado, con trato cercano y confidencialidad médica.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">¿Buscas salud sexual y reproductiva en Ontinyent?<span class="plus" aria-hidden="true"></span></button>
+          <div class="faq-a"><p>CIR Espacio Médico está en Ontinyent y atiende a pacientes de la zona y de otros puntos de Valencia para anticoncepción, revisiones, fertilidad, ITS y salud sexual.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="cta-final" data-reveal>
+      <div class="cta-final-text">
+        <h2>Reserva una consulta de salud sexual y reproductiva</h2>
+        <p>Cuéntanos qué necesitas y te ayudaremos a resolver tus dudas con una atención médica cercana, discreta y personalizada.</p>
+        <a class="cta-phone" href="tel:+34623456789">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.97.36 1.92.69 2.83a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.25-1.26a2 2 0 0 1 2.11-.45c.91.33 1.86.56 2.83.69A2 2 0 0 1 22 16.92Z"/></svg>
+          623 456 789
+        </a>
+      </div>
+
+      <form class="cta-form" id="contactForm" action="#" method="post">
+        <div class="form-field">
+          <label for="cf-nombre">Nombre y apellidos</label>
+          <input type="text" id="cf-nombre" name="nombre" placeholder="Nombre completo" autocomplete="name" required>
+        </div>
+        <div class="form-field">
+          <label for="cf-telefono">Teléfono</label>
+          <input type="tel" id="cf-telefono" name="telefono" placeholder="600 000 000" autocomplete="tel" required>
+        </div>
+        <div class="form-field">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="email" placeholder="tu@email.com" autocomplete="email" required>
+        </div>
+        <div class="form-field">
+          <label for="cf-servicio">Servicio de interés</label>
+          <select id="cf-servicio" name="servicio" required>
+            <option value="salud-sexual" selected>Salud sexual y reproductiva</option>
+            <option value="medicina-estetica">Medicina estética</option>
+            <option value="cirugia-menor">Cirugía menor ambulatoria</option>
+            <option value="dermatologia">Dermatología y tricología</option>
+            <option value="vasectomia">Vasectomía sin bisturí</option>
+            <option value="medicina-integrativa">Medicina integrativa</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary form-submit">Pedir cita</button>
+        <p class="form-note">Al enviar este formulario aceptas nuestra <a href="URL_POLITICA_PRIVACIDAD">política de privacidad</a>.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-top">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo-mark">CIR</span>
+        <span class="logo-sub">Carbonell &amp; Ribera · Espacio Médico</span>
+        <p>Medicina que te hace sentir bien, por dentro y por fuera.</p>
+        <div class="footer-social">
+          <a href="URL_INSTAGRAM" aria-label="Instagram de CIR Espacio Médico" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </a>
+          <a href="https://wa.me/34623456789" aria-label="WhatsApp de CIR Espacio Médico" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.01 2C6.5 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12.01 22C17.5 22 22 17.52 22 12S17.5 2 12.01 2Zm0 18.1c-1.66 0-3.2-.48-4.5-1.32l-.32-.2-3 .79.8-2.93-.21-.31A8.08 8.08 0 0 1 3.9 12c0-4.47 3.64-8.1 8.11-8.1 4.47 0 8.1 3.63 8.1 8.1 0 4.47-3.63 8.1-8.1 8.1Zm4.45-6.07c-.24-.12-1.43-.7-1.65-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.95-1.2-.72-.64-1.2-1.43-1.35-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.13 3.64.58.25 1.03.4 1.38.51.58.18 1.1.16 1.52.1.46-.07 1.43-.58 1.63-1.15.2-.57.2-1.05.14-1.15-.06-.1-.22-.16-.46-.28Z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li>DIRECCION_CLINICA<br>46870 Ontinyent, Valencia</li>
+          <li><a href="tel:+34623456789">623 456 789</a></li>
+          <li><a href="mailto:EMAIL_CLINICA">EMAIL_CLINICA</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Horario</h4>
+        <ul>
+          <li>Lunes a viernes<br>9:00 a 20:00</li>
+          <li>Sábados<br>10:00 a 14:00</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="URL_SOBRE_NOSOTRAS">Sobre nosotras</a></li>
+          <li><a href="URL_INICIO#servicios">Servicios</a></li>
+          <li><a href="URL_SERVICIO_MEDICINA_ESTETICA">Medicina estética</a></li>
+          <li><a href="URL_SERVICIO_CIRUGIA_MENOR">Cirugía menor ambulatoria</a></li>
+          <li><a href="URL_SERVICIO_DERMATOLOGIA_TRICOLOGIA">Dermatología y tricología</a></li>
+          <li><a href="URL_CONTACTO">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <span>© <span id="year"></span> CIR Espacio Médico. Todos los derechos reservados.</span>
+    <div class="footer-legal">
+      <a href="URL_AVISO_LEGAL">Aviso legal</a>
+      <a href="URL_POLITICA_PRIVACIDAD">Política de privacidad</a>
+      <a href="URL_POLITICA_COOKIES">Política de cookies</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+
+  var year = document.getElementById('year');
+  if(year){ year.textContent = new Date().getFullYear(); }
+
+  var header = document.getElementById('siteHeader');
+  function onScroll(){
+    if(!header){ return; }
+    if(window.scrollY > 12){ header.classList.add('is-scrolled'); }
+    else{ header.classList.remove('is-scrolled'); }
+  }
+  document.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  var toggle = document.getElementById('navToggle');
+  var nav = document.getElementById('mainNav');
+  if(toggle && nav){
+    toggle.addEventListener('click', function(){
+      var isOpen = nav.classList.toggle('is-open');
+      toggle.classList.toggle('is-open', isOpen);
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      document.body.classList.toggle('nav-locked', isOpen);
+    });
+    nav.querySelectorAll('a').forEach(function(link){
+      link.addEventListener('click', function(){
+        nav.classList.remove('is-open');
+        toggle.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('nav-locked');
+      });
+    });
+  }
+
+  var revealEls = document.querySelectorAll('[data-reveal]');
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.15});
+    revealEls.forEach(function(el){ io.observe(el); });
+  }else{
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var btn = item.querySelector('.faq-q');
+    if(!btn){ return; }
+    btn.addEventListener('click', function(){
+      var isOpen = item.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  });
+
+
+  /* ============================================================
+     Reseñas verificadas por Google, slider manual con 12 reseñas
+  ============================================================ */
+  var googleIcon = '<svg viewBox="0 0 48 48"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.6H24v8.7h11.9c-.5 2.8-2.1 5.1-4.4 6.7v5.5h7.1c4.2-3.8 6.5-9.5 6.5-16.3Z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.3l-7.1-5.5c-2 1.3-4.5 2.1-7.4 2.1-5.7 0-10.5-3.8-12.2-9.1H4.5v5.7C8.1 41.1 15.4 46 24 46Z"/><path fill="#FBBC05" d="M11.8 28.2c-.4-1.3-.7-2.7-.7-4.2s.2-2.9.7-4.2v-5.7H4.5C3 17 2 20.4 2 24s1 7 4.5 9.9l7.3-5.7Z"/><path fill="#EA4335" d="M24 10.7c3.2 0 6.1 1.1 8.4 3.3l6.3-6.3C34.9 4.2 29.9 2 24 2 15.4 2 8.1 6.9 4.5 14.1l7.3 5.7c1.7-5.3 6.5-9.1 12.2-9.1Z"/></svg>';
+  var verifiedIcon = '<svg viewBox="0 0 24 24" fill="#1A73E8"><path d="M9 16.2 5.5 12.7l-1.4 1.4L9 19 20 8l-1.4-1.4z"/></svg>';
+
+  var reviews = [
+    {name:"Marta G.", meta:"Hace 2 semanas", text:"Me sentí escuchada desde el primer minuto. Un trato exquisito y muy profesional."},
+    {name:"Laura P.", meta:"Hace 3 semanas", text:"El espacio transmite calma absoluta y los resultados han superado mis expectativas."},
+    {name:"Irene M.", meta:"Hace 1 mes", text:"Cercanía y rigor a partes iguales. Recomendable al cien por cien."},
+    {name:"Cristina V.", meta:"Hace 1 mes", text:"Profesionalidad de principio a fin. Me explicaron cada paso con muchísima paciencia."},
+    {name:"Sara T.", meta:"Hace 2 meses", text:"El mejor trato que he recibido en una clínica privada. Volveré sin duda."},
+    {name:"Noelia R.", meta:"Hace 2 meses", text:"Instalaciones impecables y un equipo cercano que te hace sentir muy cuidada."},
+    {name:"Elena F.", meta:"Hace 3 meses", text:"Resultados naturales y un seguimiento constante. Justo lo que buscaba."},
+    {name:"Patricia A.", meta:"Hace 3 meses", text:"Pedí cita un lunes y me atendieron esa misma semana. Atención rapidísima."},
+    {name:"Beatriz S.", meta:"Hace 4 meses", text:"Desde recepción hasta consulta, todo el equipo es encantador y muy profesional."},
+    {name:"Lucía D.", meta:"Hace 4 meses", text:"Me han acompañado en todo el proceso con muchísima honestidad. Gracias, CIR."},
+    {name:"Andrea N.", meta:"Hace 5 meses", text:"Un espacio precioso y un equipo que realmente sabe lo que hace. Totalmente recomendable."},
+    {name:"Raquel B.", meta:"Hace 5 meses", text:"La cercanía de las doctoras marca la diferencia. Me he sentido en buenas manos."}
+  ];
+
+  var testiSlides = document.getElementById('testiSlides');
+  if(testiSlides){
+    reviews.forEach(function(r){
+      var card = document.createElement('article');
+      card.className = 'testi-card';
+      card.innerHTML =
+        '<div class="testi-top">' +
+          '<span class="testi-stars" aria-hidden="true">★★★★★</span>' +
+          '<span class="google-badge">' + googleIcon + verifiedIcon + ' Verificado en Google</span>' +
+        '</div>' +
+        '<p>“' + r.text + '”</p>' +
+        '<div class="testi-author">' +
+          '<span class="testi-avatar" aria-hidden="true">' + r.name.charAt(0) + '</span>' +
+          '<div><div class="testi-author-name">' + r.name + '</div><div class="testi-author-meta">' + r.meta + '</div></div>' +
+        '</div>';
+      testiSlides.appendChild(card);
+    });
+
+    var testiCards = testiSlides.children;
+    var testiControls = document.getElementById('testiControls');
+    var testiPrevBtn = document.getElementById('testiPrev');
+    var testiNextBtn = document.getElementById('testiNext');
+    var testiIndex = 0;
+
+    function testiPerView(){ return window.innerWidth >= 700 ? 3 : 1; }
+    function testiMaxIndex(){ return Math.max(0, testiCards.length - testiPerView()); }
+    function buildTestiDots(){
+      if(!testiControls){ return; }
+      testiControls.innerHTML = '';
+      var total = testiMaxIndex() + 1;
+      for(var i=0; i<total; i++){
+        var dot = document.createElement('button');
+        dot.className = 'testi-dot' + (i===testiIndex ? ' is-active' : '');
+        dot.setAttribute('aria-label', 'Ir al grupo de reseñas ' + (i+1));
+        dot.addEventListener('click', (function(idx){ return function(){ testiGoTo(idx); }; })(i));
+        testiControls.appendChild(dot);
+      }
+    }
+    function testiGoTo(idx){
+      if(!testiCards.length){ return; }
+      testiIndex = Math.min(Math.max(idx,0), testiMaxIndex());
+      var cardWidth = testiCards[0].getBoundingClientRect().width;
+      var gap = parseFloat(window.getComputedStyle(testiSlides).columnGap || window.getComputedStyle(testiSlides).gap) || 32;
+      testiSlides.style.transform = 'translateX(-' + (testiIndex * (cardWidth + gap)) + 'px)';
+      if(testiControls){
+        Array.prototype.forEach.call(testiControls.children, function(dot, i){ dot.classList.toggle('is-active', i===testiIndex); });
+      }
+    }
+    if(testiPrevBtn){ testiPrevBtn.addEventListener('click', function(){ testiGoTo(testiIndex - 1); }); }
+    if(testiNextBtn){ testiNextBtn.addEventListener('click', function(){ testiGoTo(testiIndex + 1); }); }
+    window.addEventListener('resize', function(){ buildTestiDots(); testiGoTo(0); });
+    buildTestiDots();
+    testiGoTo(0);
+  }
+
+
+  var contactForm = document.getElementById('contactForm');
+  if(contactForm){
+    contactForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('Gracias. Hemos recibido tu solicitud y te contactaremos en breve.');
+      contactForm.reset();
+    });
+  }
+})();
+</script>
+</body>
+</html>
