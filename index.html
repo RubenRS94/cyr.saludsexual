@@ -1,7 +1,3 @@
-
-<!DOCTYPE html>
-<html lang="es">
-<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Salud Sexual y Reproductiva | CIR Espacio Médico</title>
@@ -25,14 +21,14 @@
   },
   "medicalSpecialty": ["Gynecologic", "Obstetric", "SexualHealth"],
   "areaServed": ["Ontinyent", "Valencia", "Albaida", "Xàtiva", "Bocairent"],
-  "url": "URL_SERVICIO_SALUD_SEXUAL_REPRODUCTIVA",
-  "sameAs": ["URL_INSTAGRAM"]
+  "url": "https://cyrmed.es/salud-sexual",
+  "sameAs": ["https://www.instagram.com/cyr_med/"]
 }
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&amp;family=Jost:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
 
 <style>
 :root{
@@ -63,7 +59,7 @@
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
-body{font-family:var(--font-body);color:var(--color-ink);background:var(--color-cream);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+body{font-family:var(--font-body);color:var(--color-ink);background:var(--color-cream);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip;}
 img{max-width:100%;display:block;}
 a{color:inherit;text-decoration:none;}
 ul{list-style:none;}
@@ -104,10 +100,10 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:500;line-height:1.15;col
 .main-nav a:hover::after,.main-nav a[aria-current="page"]::after{width:100%;}
 .main-nav a[aria-current="page"]{color:var(--color-burgundy);}
 .nav-item-has-submenu{position:relative;}
-.submenu{position:absolute;top:calc(100% + 18px);left:50%;transform:translateX(-50%) translateY(10px);min-width:250px;background:var(--color-white);border:1px solid var(--color-line);border-radius:var(--radius-md);box-shadow:0 20px 45px rgba(64,22,34,.12);padding:.75rem;display:grid!important;gap:.15rem!important;opacity:0;visibility:hidden;transition:opacity var(--t-fast),transform var(--t-fast),visibility var(--t-fast);}
-.nav-item-has-submenu:hover .submenu,.nav-item-has-submenu:focus-within .submenu{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);}
-.submenu a{display:block;padding:.65rem .8rem;border-radius:10px;font-size:.76rem;letter-spacing:.05em;}
-.submenu a:hover{background:var(--color-blush);color:var(--color-burgundy);}
+.submenu{position:absolute;top:100%;left:50%;transform:translate(-50%,10px);min-width:260px;background:var(--color-cream);border:1px solid var(--color-line);border-radius:var(--radius-md);box-shadow:0 18px 34px rgba(64,22,34,.1);padding:.8rem;display:grid!important;gap:.35rem!important;opacity:0;visibility:hidden;transition:opacity var(--t-fast),transform var(--t-fast),visibility var(--t-fast);}
+.nav-item-has-submenu:hover .submenu,.nav-item-has-submenu:focus-within .submenu{opacity:1;visibility:visible;transform:translate(-50%,0);}
+.submenu a{display:block;padding:.55rem .7rem;border-radius:var(--radius-sm);font-size:.78rem;letter-spacing:.04em;text-transform:none;}
+.submenu a:hover{background:var(--color-blush);}
 .submenu a::after{display:none;}
 .header-actions{display:flex;align-items:center;gap:var(--space-sm);}
 .header-cta{display:none;}
@@ -273,15 +269,539 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:500;line-height:1.15;col
 }
 @media(max-width:600px){.container{padding:0 var(--space-sm);}.cta-final{margin:0 var(--space-sm);padding:var(--space-lg) var(--space-sm);}.cta-form{grid-template-columns:1fr;padding:var(--space-sm);}.logo-mark{font-size:1.65rem;}.logo-sub{font-size:.49rem;}.header-inner{height:76px;}.main-nav{inset:76px 0 0 0;}.site-header.is-scrolled .header-inner{height:64px;}}
 @media (prefers-reduced-motion:reduce){[data-reveal]{opacity:1;transform:none;transition:none;}html{scroll-behavior:auto;}}
+
+/* ============================================================
+   AJUSTES RESPONSIVE FINALES
+   Mantiene escritorio y corrige móvil/tablet
+   ============================================================ */
+
+html,
+body{
+  width:100%;
+  max-width:100%;
+  overflow-x:clip;
+}
+
+img,
+svg,
+video,
+iframe{
+  max-width:100%;
+}
+
+.container,
+.header-inner,
+.hero-media,
+.cta-final,
+.results-note,
+.testi-wrap,
+.testi-track{
+  min-width:0;
+}
+
+.main-nav,
+.main-nav ul,
+.submenu,
+.hero-content,
+.intro-copy,
+.approach-content,
+.cta-form,
+.footer-grid{
+  min-width:0;
+}
+
+@media(max-width:1023px){
+  .site-header{
+    width:100%;
+  }
+
+  .main-nav{
+    width:100%;
+    max-width:100%;
+    height:calc(100dvh - var(--header-h));
+    overscroll-behavior:contain;
+  }
+
+  .main-nav a{
+    max-width:100%;
+    white-space:normal;
+    line-height:1.15;
+  }
+
+  .submenu{
+    max-width:100%;
+  }
+
+  .submenu a{
+    white-space:normal;
+    line-height:1.35;
+  }
+}
+
+@media(max-width:768px){
+  :root{
+    --space-md:1.35rem;
+    --space-lg:2.6rem;
+    --space-xl:4rem;
+  }
+
+  .section-head{
+    margin-bottom:2rem;
+  }
+
+  .section-head h2,
+  .intro-copy h2,
+  .approach-content h2,
+  .cta-final-text h2{
+    word-break:normal;
+    overflow-wrap:break-word;
+  }
+
+  .hero{
+    padding:1rem 0 0;
+  }
+
+  .hero-media{
+    aspect-ratio:auto;
+    min-height:0;
+    display:block;
+    border-radius:14px;
+  }
+
+  .hero-media img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center center;
+    opacity:.22;
+  }
+
+  .hero-media::after{
+    display:none;
+  }
+
+  .hero-content{
+    position:relative;
+    inset:auto;
+    min-height:0;
+    padding:2rem 1.1rem;
+    z-index:2;
+  }
+
+  .hero-content h1{
+    font-size:clamp(2.05rem,10vw,3rem);
+  }
+
+  .hero-content p{
+    max-width:none;
+  }
+
+  .hero-pills{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:.45rem;
+  }
+
+  .hero-pill{
+    width:100%;
+    justify-content:center;
+    text-align:center;
+    background:rgba(255,255,255,.78);
+  }
+
+  .btn{
+    width:100%;
+    max-width:100%;
+    padding:.9rem 1.2rem;
+    text-align:center;
+    white-space:normal;
+    line-height:1.25;
+  }
+
+  .intro-grid,
+  .approach-wrap{
+    gap:2rem;
+  }
+
+  .local-note{
+    padding:1rem;
+  }
+
+  .treatments-grid{
+    grid-template-columns:1fr;
+  }
+
+  .treatment-card{
+    width:100%;
+    min-width:0;
+  }
+
+  .concerns-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  .concern-item{
+    border-radius:14px;
+    align-items:flex-start;
+    line-height:1.25;
+    min-width:0;
+  }
+
+  .approach-media{
+    aspect-ratio:4/3;
+  }
+
+  .approach-item{
+    gap:.85rem;
+  }
+
+  .approach-number{
+    width:34px;
+    height:34px;
+  }
+
+  .results-note{
+    padding:2rem 1rem;
+  }
+
+  .results-gallery{
+    grid-template-columns:1fr;
+  }
+
+  .testi-slides{
+    gap:1rem;
+  }
+
+  .testi-card{
+    padding:1.2rem;
+    min-width:0;
+  }
+
+  .testi-top{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  .google-badge{
+    white-space:normal;
+    line-height:1.25;
+  }
+
+  .testi-nav{
+    gap:1rem;
+  }
+
+  .faq-q{
+    align-items:flex-start;
+    font-size:1.05rem;
+    line-height:1.2;
+  }
+
+  .faq-q .plus{
+    margin-top:.1rem;
+  }
+
+  .cta-final{
+    border-radius:14px;
+  }
+
+  .cta-form{
+    grid-template-columns:1fr;
+  }
+
+  .form-submit{
+    justify-self:stretch;
+  }
+
+  .footer-bottom{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+}
+
+@media(max-width:600px){
+  :root{
+    --header-h:76px;
+  }
+
+  .container{
+    padding-left:1rem;
+    padding-right:1rem;
+  }
+
+  .header-inner{
+    gap:.8rem;
+  }
+
+  .logo{
+    min-width:0;
+  }
+
+  .logo a{
+    max-width:72vw;
+  }
+
+  .logo-mark{
+    font-size:1.55rem;
+  }
+
+  .logo-sub{
+    font-size:.46rem;
+    line-height:1.25;
+    letter-spacing:.12em;
+    white-space:normal;
+  }
+
+  .main-nav{
+    inset:76px 0 0 0;
+    height:calc(100dvh - 76px);
+    padding:2rem 1rem;
+  }
+
+  .site-header.is-scrolled + main .main-nav,
+  .site-header.is-scrolled .main-nav{
+    height:calc(100dvh - 64px);
+  }
+
+  .hero-content{
+    padding:1.7rem 1rem;
+  }
+
+  .hero-content h1{
+    font-size:2.05rem;
+  }
+
+  .hero-content p{
+    font-size:.95rem;
+    line-height:1.55;
+  }
+
+  .eyebrow{
+    font-size:.68rem;
+    letter-spacing:.13em;
+    line-height:1.35;
+  }
+
+  .eyebrow::after{
+    width:24px;
+  }
+
+  .section{
+    padding:3rem 0;
+  }
+
+  .section-head h2,
+  .intro-copy h2,
+  .approach-content h2{
+    font-size:1.85rem;
+  }
+
+  .intro-copy p,
+  .approach-content>p,
+  .section-head p{
+    font-size:.94rem;
+  }
+
+  .concerns-grid{
+    grid-template-columns:1fr;
+  }
+
+  .treatment-card{
+    grid-template-columns:auto 1fr;
+    column-gap:.75rem;
+    row-gap:.15rem;
+  }
+
+  .treatment-icon{
+    width:34px;
+    height:34px;
+  }
+
+  .approach-item{
+    padding:.9rem;
+  }
+
+  .results-note h2{
+    font-size:1.75rem;
+  }
+
+  .testi-arrow{
+    width:42px;
+    height:42px;
+  }
+
+  .faq-a p{
+    max-width:100%;
+  }
+
+  .cta-final{
+    margin-left:1rem;
+    margin-right:1rem;
+    padding:2rem 1rem;
+  }
+
+  .form-field input,
+  .form-field select{
+    width:100%;
+    min-width:0;
+  }
+
+  .footer-top{
+    padding:2.6rem 0;
+  }
+
+  .footer-grid{
+    gap:2rem;
+  }
+}
+
+@media(max-width:380px){
+  .container{
+    padding-left:.85rem;
+    padding-right:.85rem;
+  }
+
+  .logo a{
+    max-width:68vw;
+  }
+
+  .hero-content h1{
+    font-size:1.9rem;
+  }
+
+  .hero-content{
+    padding:1.45rem .85rem;
+  }
+
+  .treatment-card{
+    display:block;
+  }
+
+  .treatment-icon{
+    margin-bottom:.7rem;
+  }
+
+  .cta-final{
+    margin-left:.85rem;
+    margin-right:.85rem;
+  }
+}
+
+
+/* ============================================================
+   AJUSTES FINALES SOLICITADOS
+   1. Hero móvil con imagen y texto separados
+   2. Footer móvil con márgenes interiores seguros
+   ============================================================ */
+
+@media(max-width:768px){
+  .hero-media{
+    display:flex;
+    flex-direction:column;
+    aspect-ratio:auto;
+    min-height:0;
+    overflow:hidden;
+    background:var(--color-white);
+  }
+
+  .hero-media img{
+    position:relative;
+    inset:auto;
+    order:1;
+    width:100%;
+    height:auto;
+    aspect-ratio:4/3;
+    object-fit:cover;
+    object-position:center center;
+    opacity:1;
+  }
+
+  .hero-media::after{
+    display:none;
+  }
+
+  .hero-content{
+    position:relative;
+    inset:auto;
+    order:2;
+    width:100%;
+    max-width:none;
+    padding:2rem 1.15rem 2.1rem;
+    background:var(--color-cream);
+  }
+
+  .hero-content h1,
+  .hero-content p{
+    max-width:none;
+  }
+
+  .site-footer .footer-top,
+  .site-footer .footer-bottom{
+    padding-left:1.15rem;
+    padding-right:1.15rem;
+  }
+
+  .site-footer .footer-grid,
+  .site-footer .footer-bottom,
+  .site-footer .footer-brand,
+  .site-footer .footer-col{
+    min-width:0;
+  }
+}
+
+@media(max-width:600px){
+  .hero-media img{
+    aspect-ratio:1.12/1;
+  }
+
+  .hero-content{
+    padding:1.7rem 1rem 1.9rem;
+  }
+
+  .site-footer .footer-top{
+    padding-top:2.8rem;
+    padding-bottom:2.4rem;
+    padding-left:1.25rem;
+    padding-right:1.25rem;
+  }
+
+  .site-footer .footer-bottom{
+    padding-top:1.2rem;
+    padding-bottom:2rem;
+    padding-left:1.25rem;
+    padding-right:1.25rem;
+    gap:.85rem;
+  }
+
+  .footer-legal{
+    gap:.7rem 1rem;
+  }
+}
+
+@media(max-width:380px){
+  .hero-content{
+    padding:1.45rem .95rem 1.65rem;
+  }
+
+  .site-footer .footer-top,
+  .site-footer .footer-bottom{
+    padding-left:1rem;
+    padding-right:1rem;
+  }
+}
+
 </style>
-</head>
-<body>
+
+
+
 <a class="skip-link" href="#main">Saltar al contenido principal</a>
 
 <header class="site-header" id="siteHeader">
   <div class="container header-inner">
     <div class="logo">
-      <a href="URL_INICIO" aria-label="CIR Espacio Médico, inicio">
+      <a href="https://cyrmed.es/" aria-label="CIR Espacio Médico, inicio">
         <span class="logo-mark">CIR</span>
         <span class="logo-sub">Carbonell &amp; Ribera · Espacio Médico</span>
       </a>
@@ -289,25 +809,25 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:500;line-height:1.15;col
 
     <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
       <ul>
-        <li><a href="URL_INICIO">Inicio</a></li>
-        <li><a href="URL_SOBRE_NOSOTRAS">Sobre nosotras</a></li>
+        <li><a href="https://cyrmed.es/">Inicio</a></li>
+        <li><a href="https://cyrmed.es/#sobre-nosotras">Sobre nosotras</a></li>
         <li class="nav-item-has-submenu">
-          <a href="URL_INICIO#servicios">Servicios</a>
+          <a href="https://cyrmed.es/#servicios">Servicios</a>
           <ul class="submenu" aria-label="Servicios">
-            <li><a href="URL_SERVICIO_MEDICINA_ESTETICA">Medicina estética</a></li>
-            <li><a href="URL_SERVICIO_CIRUGIA_MENOR">Cirugía menor ambulatoria</a></li>
-            <li><a href="URL_SERVICIO_DERMATOLOGIA_TRICOLOGIA">Dermatología y tricología</a></li>
-            <li><a href="URL_SERVICIO_SALUD_SEXUAL_REPRODUCTIVA" aria-current="page">Salud sexual y reproductiva</a></li>
-            <li><a href="URL_SERVICIO_VASECTOMIA">Vasectomía sin bisturí</a></li>
-            <li><a href="URL_SERVICIO_MEDICINA_INTEGRATIVA">Medicina integrativa</a></li>
+            <li><a href="https://cyrmed.es/medicina-estetica">Medicina estética</a></li>
+            <li><a href="https://cyrmed.es/cirugia-menor">Cirugía menor ambulatoria</a></li>
+            <li><a href="https://cyrmed.es/dermatologia">Dermatología y tricología</a></li>
+            <li><a href="https://cyrmed.es/salud-sexual" aria-current="page">Salud sexual y reproductiva</a></li>
+            <li><a href="https://cyrmed.es/vasectomia">Vasectomía sin bisturí</a></li>
+            <li><a href="https://cyrmed.es/medicina-integrativa">Medicina integrativa</a></li>
           </ul>
         </li>
-        <li><a href="URL_CONTACTO">Contacto</a></li>
+        <li><a href="https://cyrmed.es/#contacto">Contacto</a></li>
       </ul>
     </nav>
 
     <div class="header-actions">
-      <a href="URL_CONTACTO" class="btn btn-primary header-cta">Pedir cita</a>
+      <a href="https://cyrmed.es/#contacto" class="btn btn-primary header-cta">Pedir cita</a>
       <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Abrir menú de navegación">
         <span></span><span></span><span></span>
       </button>
@@ -318,7 +838,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:500;line-height:1.15;col
 <main id="main">
   <section class="hero">
     <div class="container">
-      <div class="hero-media" data-reveal>
+      <div class="hero-media" data-reveal="">
         <img src="URL_IMAGEN_1" alt="Consulta de salud sexual y reproductiva en CIR Espacio Médico en Ontinyent">
         <div class="hero-content">
           <span class="eyebrow">Salud sexual y reproductiva en Ontinyent</span>
@@ -331,7 +851,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:500;line-height:1.15;col
             <span class="hero-pill">ITS y fertilidad</span>
           </div>
           <div class="hero-ctas">
-            <a href="URL_CONTACTO" class="btn btn-primary">Reservar consulta</a>
+            <a href="https://cyrmed.es/#contacto" class="btn btn-primary">Reservar consulta</a>
             <a href="#tratamientos" class="btn btn-outline">Ver tratamientos</a>
           </div>
         </div>
@@ -342,7 +862,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:500;line-height:1.15;col
   <section class="section" id="tratamientos">
     <div class="container">
       <div class="intro-grid">
-        <div class="intro-copy" data-reveal>
+        <div class="intro-copy" data-reveal="">
           <span class="eyebrow">Qué tratamientos realizamos</span>
           <h2>Salud sexual, ginecológica y reproductiva con atención personalizada</h2>
           <p>Cuidamos de tu salud sexual y reproductiva desde una consulta tranquila, sin juicios y con información clara para que puedas tomar decisiones con seguridad.</p>
@@ -351,33 +871,33 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:500;line-height:1.15;col
         </div>
 
         <div class="treatments-grid">
-          <article class="treatment-card" data-reveal>
-            <div class="treatment-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="8"/><path d="M12 8v8M8 12h8"/></svg></div>
+          <article class="treatment-card" data-reveal="">
+            <div class="treatment-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="8"></circle><path d="M12 8v8M8 12h8"></path></svg></div>
             <h3>Anticoncepción</h3>
             <p>Asesoramiento sobre DIU, implante, píldora, anillo, parche y otros métodos según tus necesidades.</p>
           </article>
-          <article class="treatment-card" data-reveal>
-            <div class="treatment-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3c3 2.6 5 5.7 5 9a5 5 0 0 1-10 0c0-3.3 2-6.4 5-9Z"/><path d="M9 19h6"/></svg></div>
+          <article class="treatment-card" data-reveal="">
+            <div class="treatment-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3c3 2.6 5 5.7 5 9a5 5 0 0 1-10 0c0-3.3 2-6.4 5-9Z"></path><path d="M9 19h6"></path></svg></div>
             <h3>Revisiones ginecológicas</h3>
             <p>Consulta ginecológica, citología, VPH, ecografía y seguimiento preventivo cuando corresponda.</p>
           </article>
-          <article class="treatment-card" data-reveal>
-            <div class="treatment-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-4.4-9.3-9C1 8 2.8 4.5 6.4 4c2-.3 3.7.6 5.6 2.6C13.9 4.6 15.6 3.7 17.6 4c3.6.5 5.4 4 3.7 8-2.3 4.6-9.3 9-9.3 9Z"/></svg></div>
+          <article class="treatment-card" data-reveal="">
+            <div class="treatment-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 21s-7-4.4-9.3-9C1 8 2.8 4.5 6.4 4c2-.3 3.7.6 5.6 2.6C13.9 4.6 15.6 3.7 17.6 4c3.6.5 5.4 4 3.7 8-2.3 4.6-9.3 9-9.3 9Z"></path></svg></div>
             <h3>ITS y salud sexual</h3>
             <p>Valoración, orientación y pruebas relacionadas con infecciones de transmisión sexual y bienestar sexual.</p>
           </article>
-          <article class="treatment-card" data-reveal>
-            <div class="treatment-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="9" r="5"/><path d="M12 14v7M9 18h6"/></svg></div>
+          <article class="treatment-card" data-reveal="">
+            <div class="treatment-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="9" r="5"></circle><path d="M12 14v7M9 18h6"></path></svg></div>
             <h3>Fertilidad</h3>
             <p>Primera valoración, orientación y acompañamiento si estás buscando embarazo o tienes dudas.</p>
           </article>
-          <article class="treatment-card" data-reveal>
-            <div class="treatment-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h4l3 8 4-16 3 8h2"/><circle cx="12" cy="12" r="9"/></svg></div>
+          <article class="treatment-card" data-reveal="">
+            <div class="treatment-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h4l3 8 4-16 3 8h2"></path><circle cx="12" cy="12" r="9"></circle></svg></div>
             <h3>Menopausia</h3>
             <p>Acompañamiento médico en síntomas, cambios hormonales, salud íntima y calidad de vida.</p>
           </article>
-          <article class="treatment-card" data-reveal>
-            <div class="treatment-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 4 6v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V6l-8-4Z"/><path d="m9 12 2 2 4-5"/></svg></div>
+          <article class="treatment-card" data-reveal="">
+            <div class="treatment-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 4 6v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V6l-8-4Z"></path><path d="m9 12 2 2 4-5"></path></svg></div>
             <h3>Disfunciones sexuales</h3>
             <p>Consulta para dolor, deseo, molestias, dificultades sexuales o cambios que afecten a tu bienestar.</p>
           </article>
@@ -388,20 +908,20 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:500;line-height:1.15;col
 
   <section class="concerns section">
     <div class="container">
-      <div class="section-head" data-reveal>
+      <div class="section-head" data-reveal="">
         <span class="eyebrow">En qué podemos ayudarte</span>
         <h2>Consulta con confianza cualquier duda o cambio</h2>
         <p>Un espacio pensado para hablar con tranquilidad de anticoncepción, revisiones, embarazo, infecciones de transmisión sexual y problemas de salud sexual.</p>
       </div>
       <div class="concerns-grid">
-        <div class="concern-item" data-reveal>Elegir anticoncepción</div>
-        <div class="concern-item" data-reveal>Revisión ginecológica</div>
-        <div class="concern-item" data-reveal>Búsqueda de embarazo</div>
-        <div class="concern-item" data-reveal>Citología y VPH</div>
-        <div class="concern-item" data-reveal>ITS</div>
-        <div class="concern-item" data-reveal>Menopausia</div>
-        <div class="concern-item" data-reveal>Dolor o molestias</div>
-        <div class="concern-item" data-reveal>Salud sexual</div>
+        <div class="concern-item" data-reveal="">Elegir anticoncepción</div>
+        <div class="concern-item" data-reveal="">Revisión ginecológica</div>
+        <div class="concern-item" data-reveal="">Búsqueda de embarazo</div>
+        <div class="concern-item" data-reveal="">Citología y VPH</div>
+        <div class="concern-item" data-reveal="">ITS</div>
+        <div class="concern-item" data-reveal="">Menopausia</div>
+        <div class="concern-item" data-reveal="">Dolor o molestias</div>
+        <div class="concern-item" data-reveal="">Salud sexual</div>
       </div>
     </div>
   </section>
@@ -409,10 +929,10 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:500;line-height:1.15;col
   <section class="section">
     <div class="container">
       <div class="approach-wrap">
-        <div class="approach-media" data-reveal>
+        <div class="approach-media" data-reveal="">
           <img src="URL_IMAGEN_2" alt="Atención cercana en consulta de salud sexual y reproductiva en CIR Ontinyent">
         </div>
-        <div class="approach-content" data-reveal>
+        <div class="approach-content" data-reveal="">
           <span class="eyebrow">Nuestro enfoque</span>
           <h2>Atención cercana, médica y adaptada a cada etapa</h2>
           <p>Tratamos cada consulta con respeto, confidencialidad y criterio médico. Nuestro objetivo es que entiendas tus opciones y te sientas acompañada en la decisión.</p>
@@ -429,7 +949,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:500;line-height:1.15;col
 
   <section class="section" style="padding-top:0;">
     <div class="container">
-      <div class="results-note" data-reveal>
+      <div class="results-note" data-reveal="">
         <div>
           <span class="eyebrow">Casos reales</span>
           <h2>Galería clínica, cuando proceda</h2>
@@ -451,21 +971,21 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:500;line-height:1.15;col
 
   <section class="testimonials section">
     <div class="container">
-      <div class="section-head" data-reveal>
+      <div class="section-head" data-reveal="">
         <span class="eyebrow">Reseñas</span>
         <h2>Lo que dicen nuestras pacientes</h2>
       </div>
-      <div class="testi-wrap" data-reveal>
+      <div class="testi-wrap" data-reveal="">
         <div class="testi-track">
           <div class="testi-slides" id="testiSlides"><!-- generado por JS --></div>
         </div>
         <div class="testi-nav">
           <button class="testi-arrow" id="testiPrev" aria-label="Reseña anterior">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 6l-6 6 6 6"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 6l-6 6 6 6"></path></svg>
           </button>
           <div class="testi-controls" id="testiControls"></div>
           <button class="testi-arrow" id="testiNext" aria-label="Siguiente reseña">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 6l6 6-6 6"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 6l6 6-6 6"></path></svg>
           </button>
         </div>
       </div>
@@ -474,11 +994,11 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:500;line-height:1.15;col
 
   <section class="faq section">
     <div class="container">
-      <div class="section-head" data-reveal>
+      <div class="section-head" data-reveal="">
         <span class="eyebrow">Preguntas frecuentes</span>
         <h2>Dudas habituales sobre salud sexual y reproductiva</h2>
       </div>
-      <div class="faq-list" data-reveal>
+      <div class="faq-list" data-reveal="">
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">¿Cuándo hacer una citología?<span class="plus" aria-hidden="true"></span></button>
           <div class="faq-a"><p>Depende de la edad, antecedentes y controles previos. En consulta revisaremos tu caso y te indicaremos cuándo corresponde realizar citología o prueba de VPH.</p></div>
@@ -508,12 +1028,12 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:500;line-height:1.15;col
   </section>
 
   <section class="section" style="padding-top:0;">
-    <div class="cta-final" data-reveal>
+    <div class="cta-final" data-reveal="">
       <div class="cta-final-text">
         <h2>Reserva una consulta de salud sexual y reproductiva</h2>
         <p>Cuéntanos qué necesitas y te ayudaremos a resolver tus dudas con una atención médica cercana, discreta y personalizada.</p>
         <a class="cta-phone" href="tel:+34623456789">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.97.36 1.92.69 2.83a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.25-1.26a2 2 0 0 1 2.11-.45c.91.33 1.86.56 2.83.69A2 2 0 0 1 22 16.92Z"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.97.36 1.92.69 2.83a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.25-1.26a2 2 0 0 1 2.11-.45c.91.33 1.86.56 2.83.69A2 2 0 0 1 22 16.92Z"></path></svg>
           623 456 789
         </a>
       </div>
@@ -521,20 +1041,20 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:500;line-height:1.15;col
       <form class="cta-form" id="contactForm" action="#" method="post">
         <div class="form-field">
           <label for="cf-nombre">Nombre y apellidos</label>
-          <input type="text" id="cf-nombre" name="nombre" placeholder="Nombre completo" autocomplete="name" required>
+          <input type="text" id="cf-nombre" name="nombre" placeholder="Nombre completo" autocomplete="name" required="">
         </div>
         <div class="form-field">
           <label for="cf-telefono">Teléfono</label>
-          <input type="tel" id="cf-telefono" name="telefono" placeholder="600 000 000" autocomplete="tel" required>
+          <input type="tel" id="cf-telefono" name="telefono" placeholder="600 000 000" autocomplete="tel" required="">
         </div>
         <div class="form-field">
           <label for="cf-email">Email</label>
-          <input type="email" id="cf-email" name="email" placeholder="tu@email.com" autocomplete="email" required>
+          <input type="email" id="cf-email" name="email" placeholder="tu@email.com" autocomplete="email" required="">
         </div>
         <div class="form-field">
           <label for="cf-servicio">Servicio de interés</label>
-          <select id="cf-servicio" name="servicio" required>
-            <option value="salud-sexual" selected>Salud sexual y reproductiva</option>
+          <select id="cf-servicio" name="servicio" required="">
+            <option value="salud-sexual" selected="">Salud sexual y reproductiva</option>
             <option value="medicina-estetica">Medicina estética</option>
             <option value="cirugia-menor">Cirugía menor ambulatoria</option>
             <option value="dermatologia">Dermatología y tricología</option>
@@ -558,11 +1078,11 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:500;line-height:1.15;col
         <span class="logo-sub">Carbonell &amp; Ribera · Espacio Médico</span>
         <p>Medicina que te hace sentir bien, por dentro y por fuera.</p>
         <div class="footer-social">
-          <a href="URL_INSTAGRAM" aria-label="Instagram de CIR Espacio Médico" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          <a href="https://www.instagram.com/cyr_med/" aria-label="Instagram de CIR Espacio Médico" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg>
           </a>
           <a href="https://wa.me/34623456789" aria-label="WhatsApp de CIR Espacio Médico" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.01 2C6.5 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12.01 22C17.5 22 22 17.52 22 12S17.5 2 12.01 2Zm0 18.1c-1.66 0-3.2-.48-4.5-1.32l-.32-.2-3 .79.8-2.93-.21-.31A8.08 8.08 0 0 1 3.9 12c0-4.47 3.64-8.1 8.11-8.1 4.47 0 8.1 3.63 8.1 8.1 0 4.47-3.63 8.1-8.1 8.1Zm4.45-6.07c-.24-.12-1.43-.7-1.65-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.95-1.2-.72-.64-1.2-1.43-1.35-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.13 3.64.58.25 1.03.4 1.38.51.58.18 1.1.16 1.52.1.46-.07 1.43-.58 1.63-1.15.2-.57.2-1.05.14-1.15-.06-.1-.22-.16-.46-.28Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.01 2C6.5 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.06-1.33A9.94 9.94 0 0 0 12.01 22C17.5 22 22 17.52 22 12S17.5 2 12.01 2Zm0 18.1c-1.66 0-3.2-.48-4.5-1.32l-.32-.2-3 .79.8-2.93-.21-.31A8.08 8.08 0 0 1 3.9 12c0-4.47 3.64-8.1 8.11-8.1 4.47 0 8.1 3.63 8.1 8.1 0 4.47-3.63 8.1-8.1 8.1Zm4.45-6.07c-.24-.12-1.43-.7-1.65-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.95-1.2-.72-.64-1.2-1.43-1.35-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.13 3.64.58.25 1.03.4 1.38.51.58.18 1.1.16 1.52.1.46-.07 1.43-.58 1.63-1.15.2-.57.2-1.05.14-1.15-.06-.1-.22-.16-.46-.28Z"></path></svg>
           </a>
         </div>
       </div>
@@ -587,12 +1107,12 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:500;line-height:1.15;col
       <div class="footer-col">
         <h4>Navegación</h4>
         <ul>
-          <li><a href="URL_SOBRE_NOSOTRAS">Sobre nosotras</a></li>
-          <li><a href="URL_INICIO#servicios">Servicios</a></li>
-          <li><a href="URL_SERVICIO_MEDICINA_ESTETICA">Medicina estética</a></li>
-          <li><a href="URL_SERVICIO_CIRUGIA_MENOR">Cirugía menor ambulatoria</a></li>
-          <li><a href="URL_SERVICIO_DERMATOLOGIA_TRICOLOGIA">Dermatología y tricología</a></li>
-          <li><a href="URL_CONTACTO">Contacto</a></li>
+          <li><a href="https://cyrmed.es/#sobre-nosotras">Sobre nosotras</a></li>
+          <li><a href="https://cyrmed.es/#servicios">Servicios</a></li>
+          <li><a href="https://cyrmed.es/medicina-estetica">Medicina estética</a></li>
+          <li><a href="https://cyrmed.es/cirugia-menor">Cirugía menor ambulatoria</a></li>
+          <li><a href="https://cyrmed.es/dermatologia">Dermatología y tricología</a></li>
+          <li><a href="https://cyrmed.es/#contacto">Contacto</a></li>
         </ul>
       </div>
     </div>
@@ -755,5 +1275,3 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:500;line-height:1.15;col
   }
 })();
 </script>
-</body>
-</html>
